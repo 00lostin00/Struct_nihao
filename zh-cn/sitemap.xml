@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-09-23T22:01:23+08:00</lastmod>
+    <lastmod>2024-09-25T21:54:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,11 +20,8 @@
                 href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>http://localhost:1313/p/p0011/</loc>
-    <lastmod>2024-09-23T22:01:23+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-09-23T22:01:23+08:00</lastmod>
+    <lastmod>2024-09-25T21:54:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -35,6 +32,15 @@
                 hreflang="zh-cn"
                 href="http://localhost:1313/post/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/p/%E6%9C%80%E7%9F%AD%E8%B7%AF-dijkstra/</loc>
+    <lastmod>2024-09-25T21:54:41+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E5%A4%A7%E7%BA%B2/</loc>
+    <lastmod>2024-09-25T21:53:01+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/p0011/</loc>
+    <lastmod>2024-09-23T22:01:23+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/p0010%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/</loc>
     <lastmod>2024-09-18T20:59:19+08:00</lastmod>
