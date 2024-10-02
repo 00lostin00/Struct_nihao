@@ -14,25 +14,22 @@
         
         <guid>http://localhost:1313/p/p0004%E5%89%8D%E7%BC%80%E5%B9%B3%E6%96%B9%E5%92%8C/</guid>
         <description>&lt;p&gt;此题在我把时限开成 $2s$ 之后他有了两种做法，一个是 $O(1e9)$ 的背包做法，另一个是 $O(\sqrt{x})$ 的组合数做法。虽然时限有些超，但确实是一个背包的好题。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h1 id=&#34;背包做法&#34;&gt;背包做法
-&lt;/h1&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本题就是一个求方案数问题，本质就是一个背包问题。&lt;a class=&#34;link&#34; href=&#34;https://www.acwing.com/problem/content/description/11/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;1-背包做法&#34;&gt;1. 背包做法
+&lt;/h2&gt;&lt;p&gt;本题就是一个求方案数问题，本质就是一个背包问题。&lt;a class=&#34;link&#34; href=&#34;https://www.acwing.com/problem/content/description/11/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;背包求方案数&lt;/a&gt;&lt;del&gt;过会儿我会把题偷过来的&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;考虑 $dp$ ，定义状态：前 $i$ 个数中第 $i$ 个位置数字是 $j$ 数的组合方案数。
-状态转移：$$
+状态转移：
+$$
 dp_{i,j}=\sum_{j=0}^x \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})
 $$
 但是这样会发现时间复杂度是 $O(nx^2)$ ，复杂度太高，考虑优化一下，题目说要保证每个前缀和的 $s_i$ 都是平方数，那么对应到 $dp$ 方程中就是每一个 $j$ 都是平方数，那么前 $x$ 数中最大有 $\sqrt x$ 个平方数，那么 $j$ 的上限就是 $\sqrt x$ ，而且对于每一个 $j$ 的取值都要满足是个平方数，那我们开个数组 $squares$ 表示存的都是 $j$ 的平方数即可，那么新的转移方程如下：
 $$
-dp_{i,j}=\sum_{j=1}^\sqrt x \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})\quad({j,jt})\in squares
+dp_{i,j}=\sum_{j=1}^{\sqrt x} \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})\quad({j,jt})\in squares
 $$
 那么只需要把 $squares$ 数组预处理一下即可&lt;del&gt;可以用vector&lt;/del&gt;。
 新的方程时间复杂度 $O(nx)$&lt;/p&gt;
-&lt;h2 id=&#34;代码&#34;&gt;代码
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h1 id=&#34;代码&#34;&gt;代码
+&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -110,14 +107,10 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;h1 id=&#34;组合数做法&#34;&gt;组合数做法
-&lt;/h1&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其实该题的前缀和数列排列本质上就是可以构成的前缀和的那些数字的排列，从中选出 $n$ 个数，即$C_\sqrt x ^n$ 。下面给出 c++&amp;amp;python 的代码做法。C++中用到了快速幂的做法，&lt;del&gt;马上会扩展到的&lt;/del&gt;&lt;/p&gt;
-&lt;h2 id=&#34;c&#34;&gt;C++
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;2-组合数做法&#34;&gt;2. 组合数做法
+&lt;/h2&gt;&lt;p&gt;其实该题的前缀和数列排列本质上就是可以构成的前缀和的那些数字的排列，从中选出 $n$ 个数，即 $C_{\sqrt x} ^n$ 。下面给出 c++&amp;amp;python 的代码做法。C++中用到了快速幂的做法，&lt;del&gt;马上会扩展到的&lt;/del&gt;&lt;/p&gt;
+&lt;h1 id=&#34;c&#34;&gt;C++
+&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -193,8 +186,8 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;python&#34;&gt;Python
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h1 id=&#34;python&#34;&gt;Python
+&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2

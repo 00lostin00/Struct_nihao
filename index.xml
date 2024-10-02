@@ -18,12 +18,13 @@
 &lt;/h2&gt;&lt;p&gt;本题就是一个求方案数问题，本质就是一个背包问题。&lt;a class=&#34;link&#34; href=&#34;https://www.acwing.com/problem/content/description/11/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;背包求方案数&lt;/a&gt;&lt;del&gt;过会儿我会把题偷过来的&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;考虑 $dp$ ，定义状态：前 $i$ 个数中第 $i$ 个位置数字是 $j$ 数的组合方案数。
-状态转移：$$
+状态转移：
+$$
 dp_{i,j}=\sum_{j=0}^x \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})
 $$
 但是这样会发现时间复杂度是 $O(nx^2)$ ，复杂度太高，考虑优化一下，题目说要保证每个前缀和的 $s_i$ 都是平方数，那么对应到 $dp$ 方程中就是每一个 $j$ 都是平方数，那么前 $x$ 数中最大有 $\sqrt x$ 个平方数，那么 $j$ 的上限就是 $\sqrt x$ ，而且对于每一个 $j$ 的取值都要满足是个平方数，那我们开个数组 $squares$ 表示存的都是 $j$ 的平方数即可，那么新的转移方程如下：
 $$
-dp_{i,j}=\sum_{j=1}^\sqrt x \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})\quad({j,jt})\in squares
+dp_{i,j}=\sum_{j=1}^{\sqrt x} \sum_{jt=0}^{j-1} (dp_{i-1,jt}+dp_{i,j})\quad({j,jt})\in squares
 $$
 那么只需要把 $squares$ 数组预处理一下即可&lt;del&gt;可以用vector&lt;/del&gt;。
 新的方程时间复杂度 $O(nx)$&lt;/p&gt;
