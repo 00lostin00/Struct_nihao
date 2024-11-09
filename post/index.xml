@@ -192,9 +192,28 @@ $for$ 语句的三个部分中，任何一个部分都可以省略。其中，�
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;当然还有嵌套循环forforforwhilewhilewhile等&#34;&gt;当然，还有嵌套循环，for+for，for+while，while+while等
 &lt;/h1&gt;&lt;h1 id=&#34;示例代码输出一个-n-阶实心菱形&#34;&gt;示例代码：输出一个 n 阶实心菱形
-&lt;/h1&gt;&lt;p&gt;效果如图所示：&lt;/p&gt;
-&lt;p&gt;![](Pasted image 20241106194158.png)&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;此为一个 &lt;code&gt;7&lt;/code&gt; 阶实心菱形&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;o&#34;&gt;*****&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;*******&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;o&#34;&gt;*****&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -3056,7 +3075,9 @@ $.next$ 数组求法本质上是子串自己遍历子串&lt;/p&gt;
         <pubDate>Wed, 25 Sep 2024 21:53:01 +0800</pubDate>
         
         <guid>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E5%A4%A7%E7%BA%B2/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://00lostin00.github.io/p/%E4%BA%8C%E5%88%86/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://00lostin00.github.io/p/%E5%BE%AA%E7%8E%AF%E5%92%8C%E6%95%B0%E7%BB%84/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;循环与数组&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://00lostin00.github.io/p/%E4%BA%8C%E5%88%86/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;二分&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://00lostin00.github.io/p/%E6%9C%80%E7%9F%AD%E8%B7%AF-dijkstra/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;最短路-Dijkstra&lt;/a&gt;&lt;/p&gt;
